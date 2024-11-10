@@ -2,18 +2,16 @@ version: '3.8'
 
 services:
   app:
-    image: openjdk:8-jdk-alpine
+    build: .
     container_name: java-app
-    working_dir: /app
-    volumes:
-      - .:/app
     environment:
-      - DB_URL=jdbc:postgresql://movie-star-wars.railway.internal:5432/movie_db
+      - DB_URL=jdbc:postgresql://${RAILWAY_PRIVATE_DOMAIN}:5432/movie_db
       - DB_USERNAME=root
       - DB_PASSWORD=123456
     ports:
       - "8080:8080"
-    command: ["./mvnw", "spring-boot:run"]
+    depends_on:
+      - postgres
 
   postgres:
     image: postgres:13
@@ -25,7 +23,7 @@ services:
       - '5432:5432'
     volumes:
       - ./postgres_data:/var/lib/postgresql/data
-    command: [ "postgres", "-c", "client_encoding=UTF8" ]
+    command: ["postgres", "-c", "client_encoding=UTF8"]
 
   pgadmin:
     image: dpage/pgadmin4
