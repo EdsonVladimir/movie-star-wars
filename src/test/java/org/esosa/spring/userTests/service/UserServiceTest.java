@@ -18,8 +18,8 @@ public class UserServiceTest {
     public void testCreateUser() {
         UserDto userDto = new UserDto();
 
-        userDto.setName("ALeatorio");
-        userDto.setEmail("aleatorio@gmail.com");
+        userDto.setName("uno");
+        userDto.setEmail("uno@gmail.com");
         userDto.setPassword("miContraseña");
 
         User savedUser = userService.saveUser(userDto);
