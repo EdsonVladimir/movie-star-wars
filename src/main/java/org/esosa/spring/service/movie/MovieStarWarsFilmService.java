@@ -51,7 +51,7 @@ public class MovieStarWarsFilmService {
     }
 
     /**
-     * Busca films de Star Wars por su titulo.
+     * Busca films de Star Wars por su titulo de los films.
      *
      * @param name El titulo de la film a buscar.
      * @return Una lista de objetos que representan a las films cuyo titulo coincide con la búsqueda.
