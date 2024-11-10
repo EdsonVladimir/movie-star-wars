@@ -5,7 +5,7 @@ FROM openjdk:8-jdk-alpine
 WORKDIR /app
 
 # Copiamos el archivo JAR del proyecto a la imagen
-COPY target/movie-star-wars.jar /app/omovie-star-wars.jar
+COPY target/movie-star-wars.jar /app/movie-star-wars.jar
 
 # Exponemos el puerto que la aplicación usará
 EXPOSE 8080
