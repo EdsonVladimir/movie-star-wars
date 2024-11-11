@@ -3,7 +3,7 @@
 
 aplicación en Java8(Spring Boot) que se integra con la API de Star Wars (https://www.swapi.tech/documentation). La aplicación lista People, Films, Starships y Vehicles de manera paginada, filtra por ID y/o nombre, y cuenta con un sistema de autenticación seguro implementado con JWT. Además, la aplicación esta documentada en swagger y conteniene pruebas unitarias y de integración.
 
-###
+### 
 ## Contenido
 - [Características](#Características)
 - [Instalacion](#Instalacion)
@@ -32,10 +32,10 @@ aplicación en Java8(Spring Boot) que se integra con la API de Star Wars (https:
 2. Start application
     2.1 docker-compose
         - ``bash docker-compose up -d || docker-compose up -d postgres && docker-compose up -d pgadmin && (antes obtener la info y la ip de la base de datos en postgres bash docker inspect 286d02a5a465 obtenemos el host de nuestra base de datos)docker-compose up --build app
-    2.2 maven en bash sobre la rais del proyecto ejecutar "mvn spring-boot:run"
+    2.2 maven en bash sobre la rais del proyecto ejecutar "mvn spring-boot:run" 
 
-## Configuracion
-1. crear la base de datos en protgres >=13 con los siguientes datos
+## Configuracion 
+1. crear la base de datos en protgres >=13 con los siguientes datos 
     1.1 CREATE TABLE public.app_user
 (
     id bigint NOT NULL DEFAULT nextval('app_user_id_seq'::regclass),
@@ -46,7 +46,7 @@ aplicación en Java8(Spring Boot) que se integra con la API de Star Wars (https:
     CONSTRAINT app_user_pkey PRIMARY KEY (id)
 ) si el trabajo es local.
 
-    1.2 usar la base de datos test en produccion
+    1.2 usar la base de datos test en produccion 
         - DB_URL=jdbc:postgresql://autorack.proxy.rlwy.net:19960/railway
         - DB_USERNAME=postgres
         - DB_PASSWORD=AVMhWKnbzJVecYLntkVuFjNuGaJyejGf
@@ -63,7 +63,7 @@ Publicado https://movie-star-wars-gybt.onrender.com/swagger-ui/index.html
 
 
 ## Running Tests
-    mvn clean package -DskipTests
+    mvn clean package -DskipTests   
     /target/mi-app.jar
 
 ## Running Tests
