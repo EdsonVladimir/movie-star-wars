@@ -20,7 +20,8 @@ public class AuthRequest {
     @NotEmpty(message = "La contraseña del producto no puede estar vacío")
     private String password;
 
-    public AuthRequest() {}
+    public AuthRequest() {
+    }
 
     @JsonCreator
     public AuthRequest(@JsonProperty("email") String email, @JsonProperty("password") String password) {

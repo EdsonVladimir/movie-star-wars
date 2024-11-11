@@ -15,6 +15,10 @@ import javax.validation.Valid;
 import java.util.List;
 
 /**
+ * Controlador encargado de gestionar las operaciones relacionadas con los usuarios.
+ * Este controlador maneja las solicitudes para registrar un usuario, obtener todos los usuarios,
+ * obtener un usuario por su ID o correo electrónico y manejar errores durante la creación de usuarios.
+ *
  * @author Edson Sosa
  * @version 1.0
  * @since 2024
@@ -30,6 +34,14 @@ public class UserController {
         this.userService = userService;
     }
 
+    /**
+     * Método para registrar un nuevo usuario.
+     * Si el correo electrónico ya está registrado, se retorna un error 400. En caso de éxito, se retorna el
+     * usuario recién creado con el código 201.
+     *
+     * @param userDto contiene la información del usuario a registrar
+     * @return una respuesta HTTP con el usuario creado o un mensaje de error
+     */
     @ApiOperation(value = "Registrar usuario", notes = "Devuelve el usuario creado")
     @PostMapping
     public ResponseEntity<Object> createUser(@Valid @RequestBody UserRegisterDto userDto) {
@@ -48,6 +60,12 @@ public class UserController {
         }
     }
 
+    /**
+     * Método para obtener todos los usuarios registrados.
+     * Si ocurre un error al obtener los usuarios, se retorna un error 500 con el mensaje correspondiente.
+     *
+     * @return una lista de usuarios registrados o un mensaje de error
+     */
     @ApiOperation(value = "Obtener usuarios", notes = "Devuelve todos los usuarios registrados")
     @GetMapping()
     public ResponseEntity<Object> getAllUsers() {
@@ -62,6 +80,13 @@ public class UserController {
         }
     }
 
+    /**
+     * Método para obtener un usuario por su ID.
+     * Si el usuario con el ID proporcionado no se encuentra, se retorna un error 400.
+     *
+     * @param id el ID del usuario a obtener
+     * @return los detalles del usuario o un mensaje de error
+     */
     @ApiOperation(value = "Obtener usuario", notes = "Devuelve usuario filtrado por id")
     @GetMapping("/{id}")
     public ResponseEntity<Object> getUser(@PathVariable Long id) {
@@ -76,6 +101,13 @@ public class UserController {
         }
     }
 
+    /**
+     * Método para obtener un usuario por su correo electrónico.
+     * Si el usuario con el correo electrónico proporcionado no se encuentra, se retorna un error 400.
+     *
+     * @param email el correo electrónico del usuario a obtener
+     * @return los detalles del usuario o un mensaje de error
+     */
     @ApiOperation(value = "Obtener usuario", notes = "Devuelve usuario filtrado por email")
     @GetMapping("/email/{email}")
     public ResponseEntity<Object> getUserByEmail(@PathVariable String email) {

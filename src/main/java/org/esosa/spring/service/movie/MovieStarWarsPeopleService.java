@@ -18,11 +18,6 @@ import java.util.Map;
 public class MovieStarWarsPeopleService {
     private final RestTemplate restTemplate;
 
-    /**
-     * Constructor para inyectar la dependencia de RestTemplate.
-     *
-     * @param restTemplate El RestTemplate para realizar las solicitudes HTTP a la API de Star Wars.
-     */
     public MovieStarWarsPeopleService(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }

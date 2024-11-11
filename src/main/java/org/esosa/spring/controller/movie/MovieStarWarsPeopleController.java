@@ -24,11 +24,6 @@ import java.util.List;
 public class MovieStarWarsPeopleController {
     private final MovieStarWarsPeopleService movieStarWarsService;
 
-    /**
-     * Constructor para inyectar la dependencia de MovieStarWarsPeopleService.
-     *
-     * @param movieStarWarsService Servicio para interactuar con los datos de las personas de Star Wars.
-     */
     public MovieStarWarsPeopleController(MovieStarWarsPeopleService movieStarWarsService) {
         this.movieStarWarsService = movieStarWarsService;
     }

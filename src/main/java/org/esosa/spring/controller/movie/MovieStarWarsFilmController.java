@@ -24,11 +24,6 @@ import java.util.List;
 public class MovieStarWarsFilmController {
     private final MovieStarWarsFilmService movieStarWarsFilmService;
 
-    /**
-     * Constructor para inyectar la dependencia de MovieStarWarsFilmService.
-     *
-     * @param movieStarWarsFilmService Servicio para interactuar con los datos de las films de Star Wars.
-     */
     public MovieStarWarsFilmController(MovieStarWarsFilmService movieStarWarsFilmService) {
         this.movieStarWarsFilmService = movieStarWarsFilmService;
     }

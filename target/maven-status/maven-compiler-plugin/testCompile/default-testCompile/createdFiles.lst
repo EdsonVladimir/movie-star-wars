@@ -1,0 +1,11 @@
+org/esosa/spring/unit/tests/movies/service/MovieStarWarsVehicleServiceTest.class
+org/esosa/spring/unit/tests/movies/service/MovieStarWarsFilmServiceTest.class
+org/esosa/spring/unit/tests/movies/controller/MovieStarWarsFilmControllerTest.class
+org/esosa/spring/unit/tests/user/service/UserServiceTest.class
+org/esosa/spring/MovieStarWarsApplicationTests.class
+org/esosa/spring/unit/tests/movies/controller/MovieStarWarsStarshipControllerTest.class
+org/esosa/spring/unit/tests/movies/service/MovieStarWarsPeopleServiceTest.class
+org/esosa/spring/unit/tests/movies/service/MovieStarWarsStarshipServiceTest.class
+org/esosa/spring/unit/tests/user/controller/UserControllerTest.class
+org/esosa/spring/unit/tests/movies/controller/MovieStarWarsVehicleControllerTest.class
+org/esosa/spring/unit/tests/movies/controller/MovieStarWarsPeopleControllerTest.class

@@ -11,4 +11,4 @@ COPY target/movie-star-wars.jar /app/movie-star-wars.jar
 EXPOSE 8080
 
 # Comando para ejecutar la aplicación
-CMD ["java", "-jar", "movie-star-wars.jar"]
+CMD ["java", "-Xmx450m", "-Xms256m", "-jar", "movie-star-wars.jar"]

@@ -31,10 +31,10 @@ public class UserDto {
     public UserDto() {
     }
 
-    public UserDto(Long id, String email, String name, String password, boolean enabled) {
+    public UserDto(Long id, String name, String email, String password, boolean enabled) {
         this.id = id;
-        this.email = email;
         this.name = name;
+        this.email = email;
         this.password = password;
         this.enabled = enabled;
     }

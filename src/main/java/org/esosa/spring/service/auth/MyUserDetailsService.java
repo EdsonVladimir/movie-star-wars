@@ -13,7 +13,7 @@ import java.util.Collections;
  * Servicio personalizado para cargar detalles de un usuario basado en el nombre de usuario.
  * Esta clase implementa la interfaz UserDetailsService de Spring Security, cumpliendo con el principio SOLID de
  * Responsabilidad Única, ya que se enfoca exclusivamente en cargar y gestionar los detalles de autenticación de un usuario.
- * <p>
+ *
  * Esta clase permite que el sistema autentique a los usuarios basados en la lógica definida.
  *
  * @author Edson
