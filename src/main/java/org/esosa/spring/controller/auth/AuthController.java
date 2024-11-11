@@ -31,7 +31,7 @@ import javax.validation.Valid;
  * @since 2024
  */
 @RestController
-@Api(value = "Autentificacion de Usuario", description = "Validacion de usaurio registrado y generacion de token")
+@Api(value = "Autentificacion de Usuario / Iniciar sesion", description = "Validacion de usaurio registrado y generacion de token")
 public class AuthController {
 
     private final AuthenticationManager authenticationManager;

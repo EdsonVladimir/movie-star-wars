@@ -8,7 +8,7 @@ WORKDIR /app
 COPY target/movie-star-wars.jar /app/movie-star-wars.jar
 
 # Exponemos el puerto que la aplicación usará
-EXPOSE 8080
+EXPOSE 3000
 
 # Comando para ejecutar la aplicación
 CMD ["java", "-Xmx450m", "-Xms256m", "-jar", "movie-star-wars.jar"]
