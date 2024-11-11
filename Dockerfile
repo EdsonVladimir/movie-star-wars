@@ -1,12 +1,14 @@
-# Etapa 1: Construcción
-FROM maven:3.8-openjdk-8 AS build
-WORKDIR /app
-COPY . .
-RUN ./mvnw clean package -DskipTests
-
-# Etapa 2: Ejecución
+# Usamos una imagen base de OpenJDK 8
 FROM openjdk:8-jdk-alpine
+
+# Definimos el directorio de trabajo en el contenedor
 WORKDIR /app
-COPY --from=build /app/target/movie-star-wars.jar /app/movie-star-wars.jar
+
+# Copiamos el archivo JAR del proyecto a la imagen
+COPY target/movie-star-wars.jar /app/movie-star-wars.jar
+
+# Exponemos el puerto que la aplicación usará
 EXPOSE 8080
+
+# Comando para ejecutar la aplicación
 CMD ["java", "-jar", "movie-star-wars.jar"]
