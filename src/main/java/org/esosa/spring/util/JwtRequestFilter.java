@@ -18,7 +18,7 @@ import java.io.IOException;
  * Filtro que intercepta cada solicitud HTTP para verificar y validar el token JWT presente en el encabezado.
  * Este filtro sigue el principio de SRP (Responsabilidad Única) del principio SOLID,
  * ya que está dedicado exclusivamente a manejar la autenticación del token en cada solicitud.
- * <p>
+ *
  * Al extender OncePerRequestFilter, se asegura de que este filtro se ejecute una sola vez por solicitud.
  *
  * @author Edson Sosa

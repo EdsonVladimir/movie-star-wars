@@ -1,9 +1,12 @@
 package org.esosa.spring.dto.auth;
 
 import javax.persistence.Id;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
 
+/**
+ * @author Edson Sosa
+ * @version 1.0
+ * @since 2024
+ */
 public class AuthResponseDto {
     @Id
     private Long id;
@@ -11,7 +14,8 @@ public class AuthResponseDto {
     private String name;
     private String token;
 
-    public AuthResponseDto() {}
+    public AuthResponseDto() {
+    }
 
     public AuthResponseDto(Long id, String email, String name, String token) {
         this.id = id;

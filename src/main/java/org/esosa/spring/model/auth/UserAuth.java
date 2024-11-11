@@ -24,7 +24,7 @@ public class UserAuth implements UserDetails {
     @ElementCollection(fetch = FetchType.EAGER)
     private Set<String> roles;
 
-    public UserAuth(String name, String email , String password, boolean enabled) {
+    public UserAuth(String name, String email, String password, boolean enabled) {
         this.name = name;
         this.email = email;
         this.password = password;

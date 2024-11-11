@@ -21,6 +21,11 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 
 /**
+ * Controlador encargado de la autenticación de usuarios.
+ *
+ * Este controlador maneja las solicitudes de autenticación de los usuarios, validando el correo electrónico y la contraseña,
+ * generando un token JWT que se devuelve al cliente para autenticar futuras solicitudes.
+ *
  * @author Edson Sosa
  * @version 1.0
  * @since 2024
@@ -43,8 +48,18 @@ public class AuthController {
         this.userService = userService;
     }
 
+    /**
+     * Método que valida las credenciales del usuario y genera un token JWT.
+     *
+     * Si las credenciales son correctas, se genera un token JWT y se devuelve junto con los datos del usuario.
+     * En caso de error, se devuelve un mensaje de error adecuado.
+     *
+     * @param authRequest contiene el correo electrónico y la contraseña del usuario a autenticar
+     * @return una respuesta HTTP con los datos del usuario y el token JWT en caso de éxito, o un mensaje de error en caso de fallo
+     * @throws Exception en caso de un error no controlado durante la autenticación
+     */
     @ApiOperation(value = "Validacion de usaurio", notes = "Validacion de usaurio registrado se retorna los datos del usuario registrado mas su token")
-    @PostMapping("/authenticate")
+    @PostMapping("/api/authenticate")
     public ResponseEntity<Object> createAuthenticationToken(@Valid @RequestBody AuthRequest authRequest) throws Exception {
         try {
             UserResponseDto user = userService.getUserByEmail(authRequest.getEmail());
