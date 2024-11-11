@@ -18,7 +18,7 @@ import java.util.List;
  * @version 1.0
  * @since 2024
  */
-@Api(tags = "Movie Star Wars Starship API", value = "Funcionalidades para listar Starship", description = "Operaciones relacionadas a starship")
+@Api(tags = "Movie Star Wars Starship API", value = "Funcionalidades para listar Starship", description = "Operaciones relacionadas a starship  necesita iniciar sesion para obtener Datos")
 @RestController
 @RequestMapping("/api/starwars")
 public class MovieStarWarsStarshipController {

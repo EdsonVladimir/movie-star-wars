@@ -18,7 +18,7 @@ import java.util.List;
  * @version 1.0
  * @since 2024
  */
-@Api(tags = "Movie Star Wars People API", value = "Funcionalidades para listar People", description = "Operaciones relacionadas a people")
+@Api(tags = "Movie Star Wars People API", value = "Funcionalidades para listar People", description = "Operaciones relacionadas a people  necesita iniciar sesion para obtener Datos")
 @RestController
 @RequestMapping("/api/starwars")
 public class MovieStarWarsPeopleController {

@@ -58,11 +58,12 @@ public class SwaggerConfig implements WebMvcConfigurer {
     private ApiInfo apiInfoMetaData() {
 
         return new ApiInfoBuilder().title("MOVIES STAR WARS")
-                .description("API Endpoint Decoration")
-                .contact(new Contact("edson.sosa", "https://edson-sosa.dev", "edson.vladimir.sosa@gmail.com"))
+                .description("Despliegue de servicios integrados con Api Star Wars")
+                .contact(new Contact("edson.vladimir.sosa@gmail.com", "https://edson-sosa.dev", "edson.vladimir.sosa@gmail.com"))
                 .license("Apache 2.0")
                 .licenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html")
                 .version("1.0.0")
+                .description("Nota para acceder de a los servicios de Movie Star Wars... debe Ingresar a Authorice y Añadir el token obtenido al iniciar sesion en el campo Value: Bearer Token")
                 .build();
     }
 

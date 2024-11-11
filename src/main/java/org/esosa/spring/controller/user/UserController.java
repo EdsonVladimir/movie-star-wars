@@ -25,7 +25,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/users")
-@Api(value = "Controlador de Ususarios", description = "Operaciones relacionadas a Usuarios")
+@Api(value = "Controlador de Ususarios", description = "Operaciones relacionadas a Usuarios no Necesita Iniciar sesion")
 public class UserController {
 
     private final UserService userService;
