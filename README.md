@@ -9,9 +9,9 @@ aplicación en Java8(Spring Boot) que se integra con la API de Star Wars (https:
 - [Instalacion](#Instalacion)
 - [Configuracion](#Configuracion)
 - [Uso](#Uso)
-- [API Documentation](#api-documentation)
+- [Documentacion de la Api](#api-documentation)
 - [Generar -jar](#running-tests)
-- [Running Tests](#running-tests)
+- [Correr Tests](#running-tests)
 
 ## Características
 - Creación, busqueda por id y busqueda por nombre de usuarios
@@ -36,15 +36,17 @@ aplicación en Java8(Spring Boot) que se integra con la API de Star Wars (https:
 
 ## Configuracion 
 1. crear la base de datos en protgres >=13 con los siguientes datos 
+
     1.1 CREATE TABLE public.app_user
-(
-    id bigint NOT NULL DEFAULT nextval('app_user_id_seq'::regclass),
-    name character varying(255) COLLATE pg_catalog."default",
-    email character varying(255) COLLATE pg_catalog."default",
-    password character varying(255) COLLATE pg_catalog."default",
-    enabled boolean,
-    CONSTRAINT app_user_pkey PRIMARY KEY (id)
-) si el trabajo es local.
+    (
+        id bigint NOT NULL DEFAULT nextval('app_user_id_seq'::regclass),
+        name character varying(255) COLLATE pg_catalog."default",
+        email character varying(255) COLLATE pg_catalog."default",
+        password character varying(255) COLLATE pg_catalog."default",
+        enabled boolean,
+        CONSTRAINT app_user_pkey PRIMARY KEY (id)
+    ) 
+si el trabajo es local.
 
     1.2 usar la base de datos test en produccion 
         - DB_URL=jdbc:postgresql://autorack.proxy.rlwy.net:19960/railway
@@ -57,15 +59,15 @@ aplicación en Java8(Spring Boot) que se integra con la API de Star Wars (https:
 Local http://localhost:8080/swagger-ui/index.html
 Publicado https://movie-star-wars-gybt.onrender.com/swagger-ui/index.html
 
-## Api Documentacion
+## Documentacion de la Api
 Local http://localhost:8080/swagger-ui/index.html
 Publicado https://movie-star-wars-gybt.onrender.com/swagger-ui/index.html
 
 
-## Running Tests
+## Generar -jar
     mvn clean package -DskipTests   
     /target/mi-app.jar
 
-## Running Tests
+## Correr Tests
     mvn test || mvn -Dtest=UserServiceTest test
 
